@@ -4,6 +4,7 @@ namespace UsuariosBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * User
@@ -26,7 +27,13 @@ class User implements UserInterface
      * @var string
      *
      * @ORM\Column(name="username", type="string", length=255, unique=true)
-     */
+     * @Assert\Length(
+     *      min = 4,
+     *      max = 16,
+     *      minMessage = "El campo username debe tener como minimo 4 caracteres",
+     *      maxMessage = "El campo username debe tener como máximo 16 caracteres"
+     * )
+    */
     private $username;
 
     /**

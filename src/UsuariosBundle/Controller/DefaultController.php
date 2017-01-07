@@ -24,7 +24,7 @@ class DefaultController extends Controller
      */
     public function usuariosAction()
     {
-        return $this->render('UsuariosBundle:Default:index.html.twig');
+        return $this->render('UsuariosBundle:Default:usuarios.html.twig');
     }
     /**
      * @Route("/register", name="user_registration")

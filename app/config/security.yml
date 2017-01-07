@@ -27,6 +27,9 @@ security:
             form_login:
                 login_path: /usuarios/login
                 check_path: /usuarios/login
+            logout:
+                path:   /usuarios/logout
+                target: /usuarios
         main:
             anonymous: ~
             # activate different ways to authenticate
